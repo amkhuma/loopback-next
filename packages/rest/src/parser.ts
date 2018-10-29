@@ -11,18 +11,14 @@ import {
   SchemasObject,
 } from '@loopback/openapi-v3-types';
 import * as debugModule from 'debug';
-import * as HttpErrors from 'http-errors';
 import * as parseUrl from 'parseurl';
 import {parse as parseQuery} from 'qs';
 import {coerceParameter} from './coercion/coerce-parameter';
 import {RestHttpErrors} from './rest-http-error';
 import {ResolvedRoute} from './router';
-import {
-  OperationArgs,
-  PathParameterValues,
-  Request,
-} from './types';
+import {OperationArgs, PathParameterValues, Request} from './types';
 import {validateRequestBody} from './validation/request-body.validator';
+import {RequestBodyParser, RequestBody} from './body-parser';
 
 const debug = debugModule('loopback:rest:parser');
 
