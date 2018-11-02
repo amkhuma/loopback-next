@@ -28,5 +28,8 @@ export {inject, Setter, Getter, Injection, InjectionMetadata} from './inject';
 export {Provider} from './provider';
 
 export {instantiateClass, invokeMethod} from './resolver';
+
+export * from './observer';
+
 // internals for testing
 export {describeInjectedArguments, describeInjectedProperties} from './inject';
