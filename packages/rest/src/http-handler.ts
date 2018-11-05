@@ -67,6 +67,7 @@ export class HttpHandler {
   }
 
   findRoute(request: Request): ResolvedRoute {
+    //console.log('>> FINDING ROUTE:');
     const route = this._routes.find(request);
     Object.assign(route.schemas, this.getApiDefinitions());
     return route;
